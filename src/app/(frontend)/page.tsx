@@ -25,11 +25,6 @@ export default async function HomePage() {
             summarize the REST routes that this backend exposes automatically.
           </p>
         </div>
-        <div className="hero-actions">
-          <a className="admin" href="/admin" rel="noopener noreferrer" target="_blank">
-            Open Admin
-          </a>
-        </div>
       </header>
 
       <section className="card-grid">

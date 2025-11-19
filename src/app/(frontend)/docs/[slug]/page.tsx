@@ -5,13 +5,14 @@ import { collectionDocs } from '../../collectionDocs'
 import '../../styles.css'
 
 type DocsPageProps = {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
-export default function CollectionDocsPage({ params }: DocsPageProps) {
-  const doc = collectionDocs[params.slug]
+export default async function CollectionDocsPage({ params }: DocsPageProps) {
+  const { slug } = await params
+  const doc = collectionDocs[slug]
 
   if (!doc) {
     return notFound()

@@ -70,6 +70,13 @@ export interface Config {
     users: User;
     media: Media;
     students: Student;
+    cars: Car;
+    books: Book;
+    orders: Order;
+    tasks: Task;
+    products: Product;
+    feedback: Feedback;
+    'blog-posts': BlogPost;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -80,6 +87,13 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     students: StudentsSelect<false> | StudentsSelect<true>;
+    cars: CarsSelect<false> | CarsSelect<true>;
+    books: BooksSelect<false> | BooksSelect<true>;
+    orders: OrdersSelect<false> | OrdersSelect<true>;
+    tasks: TasksSelect<false> | TasksSelect<true>;
+    products: ProductsSelect<false> | ProductsSelect<true>;
+    feedback: FeedbackSelect<false> | FeedbackSelect<true>;
+    'blog-posts': BlogPostsSelect<false> | BlogPostsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -177,6 +191,119 @@ export interface Student {
   createdAt: string;
 }
 /**
+ * Vehicle inventory for CRUD practice with enum and number validation
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "cars".
+ */
+export interface Car {
+  id: number;
+  make: string;
+  model: string;
+  year: number;
+  color: 'red' | 'blue' | 'black' | 'white' | 'silver' | 'gray' | 'green' | 'yellow';
+  price: number;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Library catalog for pagination and sorting practice
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "books".
+ */
+export interface Book {
+  id: number;
+  title: string;
+  author: string;
+  category: string;
+  publishedYear: number;
+  available?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Order management with status enum and date filtering
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "orders".
+ */
+export interface Order {
+  id: number;
+  orderNumber: string;
+  customerName: string;
+  totalAmount: number;
+  status: 'pending' | 'shipped' | 'delivered';
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Task management for PATCH and boolean toggle practice
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "tasks".
+ */
+export interface Task {
+  id: number;
+  title: string;
+  description?: string | null;
+  priority: 'low' | 'medium' | 'high';
+  dueDate?: string | null;
+  completed?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Product catalog for validation and numeric comparison practice
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "products".
+ */
+export interface Product {
+  id: number;
+  name: string;
+  SKU: string;
+  price: number;
+  inventoryCount: number;
+  featured?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Feedback system for error handling and validation practice
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "feedback".
+ */
+export interface Feedback {
+  id: number;
+  authorName: string;
+  rating: number;
+  comment: string;
+  resolved?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Blog posts for slug uniqueness and text search practice
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "blog-posts".
+ */
+export interface BlogPost {
+  id: number;
+  title: string;
+  /**
+   * URL-friendly identifier (e.g., "my-awesome-post")
+   */
+  slug: string;
+  summary: string;
+  body: string;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
@@ -211,6 +338,34 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'students';
         value: number | Student;
+      } | null)
+    | ({
+        relationTo: 'cars';
+        value: number | Car;
+      } | null)
+    | ({
+        relationTo: 'books';
+        value: number | Book;
+      } | null)
+    | ({
+        relationTo: 'orders';
+        value: number | Order;
+      } | null)
+    | ({
+        relationTo: 'tasks';
+        value: number | Task;
+      } | null)
+    | ({
+        relationTo: 'products';
+        value: number | Product;
+      } | null)
+    | ({
+        relationTo: 'feedback';
+        value: number | Feedback;
+      } | null)
+    | ({
+        relationTo: 'blog-posts';
+        value: number | BlogPost;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -304,6 +459,95 @@ export interface StudentsSelect<T extends boolean = true> {
   age?: T;
   grade?: T;
   status?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "cars_select".
+ */
+export interface CarsSelect<T extends boolean = true> {
+  make?: T;
+  model?: T;
+  year?: T;
+  color?: T;
+  price?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "books_select".
+ */
+export interface BooksSelect<T extends boolean = true> {
+  title?: T;
+  author?: T;
+  category?: T;
+  publishedYear?: T;
+  available?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "orders_select".
+ */
+export interface OrdersSelect<T extends boolean = true> {
+  orderNumber?: T;
+  customerName?: T;
+  totalAmount?: T;
+  status?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "tasks_select".
+ */
+export interface TasksSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  priority?: T;
+  dueDate?: T;
+  completed?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "products_select".
+ */
+export interface ProductsSelect<T extends boolean = true> {
+  name?: T;
+  SKU?: T;
+  price?: T;
+  inventoryCount?: T;
+  featured?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "feedback_select".
+ */
+export interface FeedbackSelect<T extends boolean = true> {
+  authorName?: T;
+  rating?: T;
+  comment?: T;
+  resolved?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "blog-posts_select".
+ */
+export interface BlogPostsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  summary?: T;
+  body?: T;
+  published?: T;
   updatedAt?: T;
   createdAt?: T;
 }

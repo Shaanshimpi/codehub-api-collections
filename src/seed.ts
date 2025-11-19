@@ -51,7 +51,7 @@ const LAST_NAMES = [
 const GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10', 'Grade 11', 'Grade 12']
 const STATUS_OPTIONS = ['active', 'inactive', 'graduated'] as const
 
-const pickRandom = <T,>(items: T[]): T => items[Math.floor(Math.random() * items.length)]
+const pickRandom = <T,>(items: readonly T[]): T => items[Math.floor(Math.random() * items.length)]
 
 const createStudentData = (index: number) => {
   const first = pickRandom(FIRST_NAMES)

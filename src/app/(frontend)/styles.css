@@ -164,24 +164,6 @@ svg {
   font-size: 1.2rem;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-
-.hero-actions .admin {
-  text-decoration: none;
-  padding: 0.5rem 0.85rem;
-  border-radius: 6px;
-  font-weight: 600;
-}
-.hero-actions .admin {
-  color: rgb(0, 0, 0);
-  background: rgb(255, 255, 255);
-}
-
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
