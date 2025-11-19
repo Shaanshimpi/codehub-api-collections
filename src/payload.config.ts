@@ -27,6 +27,8 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
+  cors: ['*'],
+  csrf: ['*'],
   collections: [
     Users,
     Media,
