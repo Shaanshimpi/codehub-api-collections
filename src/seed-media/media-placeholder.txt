@@ -1,0 +1,4 @@
+CodeHub media placeholder file used during seeding.
+This can be replaced with any image or binary asset if needed.
+
+

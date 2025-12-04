@@ -27,7 +27,7 @@ export default async function CollectionDocsPage({ params }: DocsPageProps) {
           <p className="brand-subtitle">API Playground</p>
         </div>
       </div>
-      <Link className="back-link" href="/">
+      <Link className="back-link" href="/apis">
         ← All collections
       </Link>
 
