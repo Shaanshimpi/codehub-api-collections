@@ -185,6 +185,133 @@ body {
   line-height: 1.5;
 }
 
+/* Specials Section */
+.restaurant-specials {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.restaurant-specials h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.restaurant-specials-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.restaurant-special-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.restaurant-special-card h3 {
+  color: #d32f2f;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.restaurant-special-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.restaurant-special-desc {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.restaurant-special-price {
+  color: #d32f2f;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Hours Section */
+.restaurant-hours {
+  padding: 80px 20px;
+}
+
+.restaurant-hours h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.restaurant-hours-wrapper {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.restaurant-hours-info {
+  flex: 1;
+}
+
+.restaurant-hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.restaurant-hour-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.restaurant-day {
+  font-weight: 600;
+  color: #333;
+}
+
+.restaurant-time {
+  color: #666;
+}
+
+.restaurant-location-info {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.restaurant-location-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.restaurant-location-info p {
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
 /* About Section */
 .restaurant-about {
   padding: 80px 20px;
@@ -246,6 +373,15 @@ body {
 
   .restaurant-menu-item {
     min-width: 100%;
+  }
+
+  .restaurant-hours-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .restaurant-specials-grid {
+    flex-direction: column;
   }
 }
 

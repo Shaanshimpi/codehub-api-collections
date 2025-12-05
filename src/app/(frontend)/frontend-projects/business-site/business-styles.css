@@ -1,0 +1,628 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.business-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation - Complex Flex Structure */
+.business-navbar {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.business-nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+.business-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.business-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.business-nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.business-nav-links a:hover {
+  color: #2563eb;
+}
+
+.business-nav-cta {
+  flex-shrink: 0;
+}
+
+.business-cta-button {
+  padding: 10px 20px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.business-cta-button:hover {
+  background: #1d4ed8;
+}
+
+/* Hero Section - Complex Flex Layout */
+.business-hero {
+  padding: 100px 20px;
+  background: #f8f9fa;
+}
+
+.business-hero-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.business-hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.business-hero-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.business-hero-content p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.business-hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.business-btn-primary {
+  padding: 12px 24px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.business-btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.business-btn-secondary {
+  padding: 12px 24px;
+  background: transparent;
+  color: #2563eb;
+  text-decoration: none;
+  border: 2px solid #2563eb;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.business-btn-secondary:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.business-hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.business-image-placeholder {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  background: #e0e0e0;
+  border-radius: 8px;
+}
+
+/* Services Section - Complex Nested Flex */
+.business-services {
+  padding: 80px 20px;
+}
+
+.business-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.business-section-header h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.business-section-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.business-services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.business-service-card {
+  flex: 1;
+  min-width: 280px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.business-service-icon {
+  width: 60px;
+  height: 60px;
+  background: #2563eb;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.business-service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.business-service-content h3 {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.business-service-content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.business-service-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.business-service-features li {
+  color: #666;
+  font-size: 0.95rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.business-service-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/* Team Section - Complex Card Layout */
+.business-team {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.business-team-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.business-team-member {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.business-member-image {
+  width: 100%;
+  height: 250px;
+  background: #e0e0e0;
+  flex-shrink: 0;
+}
+
+.business-member-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.business-member-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.business-member-header h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.business-member-role {
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.business-member-bio {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.business-member-contact {
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.business-member-contact span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* About Section - Complex Two-Column Flex */
+.business-about {
+  padding: 80px 20px;
+  background: #1f2937;
+  color: white;
+}
+
+.business-about-wrapper {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.business-about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.business-about-content h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+.business-about-content p {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.business-stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.business-stat-item {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+}
+
+.business-stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.business-stat-label {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+}
+
+.business-about-features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.business-feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.business-feature-icon {
+  width: 50px;
+  height: 50px;
+  background: #2563eb;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.business-feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.business-feature-text h4 {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.business-feature-text p {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+}
+
+/* Contact Section - Complex Flex Layout */
+.business-contact {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.business-contact-wrapper {
+  display: flex;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.business-contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.business-contact-info h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.business-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.business-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.business-contact-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.business-contact-value {
+  color: #666;
+  font-size: 1rem;
+}
+
+.business-contact-hours {
+  flex: 1;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.business-contact-hours h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.business-hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.business-hour-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.business-hour-row:last-child {
+  border-bottom: none;
+}
+
+.business-hour-row span:first-child {
+  font-weight: 600;
+  color: #333;
+}
+
+.business-hour-row span:last-child {
+  color: #666;
+}
+
+/* Footer - Complex Multi-Column Flex */
+.business-footer {
+  background: #1f2937;
+  color: white;
+  padding: 60px 20px 20px;
+}
+
+.business-footer-content {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.business-footer-section {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.business-footer-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.business-footer-section p {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.business-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.business-footer-links li {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+}
+
+.business-footer-links a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.business-footer-links a:hover {
+  color: white;
+}
+
+.business-footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .business-nav-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .business-nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .business-hero-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .business-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .business-services-grid {
+    flex-direction: column;
+  }
+
+  .business-team-grid {
+    flex-direction: column;
+  }
+
+  .business-about-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .business-stats {
+    flex-direction: column;
+  }
+
+  .business-contact-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .business-footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+

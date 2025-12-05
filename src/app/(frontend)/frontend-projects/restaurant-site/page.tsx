@@ -13,6 +13,8 @@ export default function RestaurantSitePage() {
           <ul className="restaurant-nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#menu">Menu</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#hours">Hours</a></li>
             <li><a href="#about">About</a></li>
           </ul>
         </div>
@@ -129,6 +131,65 @@ export default function RestaurantSitePage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Specials Section */}
+      <section id="specials" className="restaurant-specials">
+        <div className="restaurant-container">
+          <h2>Today's Specials</h2>
+          <div className="restaurant-specials-grid">
+            <div className="restaurant-special-card">
+              <h3>Chef's Special</h3>
+              <p className="restaurant-special-name">Osso Buco</p>
+              <p className="restaurant-special-desc">Braised veal shanks with risotto</p>
+              <p className="restaurant-special-price">$24</p>
+            </div>
+            <div className="restaurant-special-card">
+              <h3>Soup of the Day</h3>
+              <p className="restaurant-special-name">Minestrone</p>
+              <p className="restaurant-special-desc">Traditional Italian vegetable soup</p>
+              <p className="restaurant-special-price">$8</p>
+            </div>
+            <div className="restaurant-special-card">
+              <h3>Wine Special</h3>
+              <p className="restaurant-special-name">Chianti Classico</p>
+              <p className="restaurant-special-desc">Half price on bottles</p>
+              <p className="restaurant-special-price">$25</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hours Section */}
+      <section id="hours" className="restaurant-hours">
+        <div className="restaurant-container">
+          <div className="restaurant-hours-wrapper">
+            <div className="restaurant-hours-info">
+              <h2>Hours & Location</h2>
+              <div className="restaurant-hours-list">
+                <div className="restaurant-hour-item">
+                  <span className="restaurant-day">Monday - Thursday</span>
+                  <span className="restaurant-time">11:00 AM - 10:00 PM</span>
+                </div>
+                <div className="restaurant-hour-item">
+                  <span className="restaurant-day">Friday - Saturday</span>
+                  <span className="restaurant-time">11:00 AM - 11:00 PM</span>
+                </div>
+                <div className="restaurant-hour-item">
+                  <span className="restaurant-day">Sunday</span>
+                  <span className="restaurant-time">12:00 PM - 9:00 PM</span>
+                </div>
+              </div>
+            </div>
+            <div className="restaurant-location-info">
+              <h3>Visit Us</h3>
+              <p>123 Main Street</p>
+              <p>Downtown District</p>
+              <p>Phone: (555) 123-4567</p>
+              <p>Email: info@bellavista.com</p>
             </div>
           </div>
         </div>
