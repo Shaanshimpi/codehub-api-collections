@@ -210,7 +210,7 @@ const seed = async () => {
           data: upload.data,
           filePath: upload.filePath,
           draft: false,
-        } as any)
+        } as Parameters<typeof payload.create>[0])
       }
       payload.logger.info(`✅ ${label} complete`)
     }

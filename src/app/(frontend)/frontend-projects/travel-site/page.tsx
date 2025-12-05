@@ -75,7 +75,7 @@ export default function TravelSitePage() {
       <section id="about" className="travel-about">
         <div className="travel-container">
           <h2>About Wanderlust Travel</h2>
-          <p>We are passionate about creating unforgettable travel experiences. With over 10 years in the industry, we've helped thousands of travelers discover their dream destinations.</p>
+          <p>We are passionate about creating unforgettable travel experiences. With over 10 years in the industry, we&apos;ve helped thousands of travelers discover their dream destinations.</p>
         </div>
       </section>
 

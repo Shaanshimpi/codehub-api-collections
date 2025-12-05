@@ -139,10 +139,10 @@ export default function RestaurantSitePage() {
       {/* Specials Section */}
       <section id="specials" className="restaurant-specials">
         <div className="restaurant-container">
-          <h2>Today's Specials</h2>
+          <h2>Today&apos;s Specials</h2>
           <div className="restaurant-specials-grid">
             <div className="restaurant-special-card">
-              <h3>Chef's Special</h3>
+              <h3>Chef&apos;s Special</h3>
               <p className="restaurant-special-name">Osso Buco</p>
               <p className="restaurant-special-desc">Braised veal shanks with risotto</p>
               <p className="restaurant-special-price">$24</p>

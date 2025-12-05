@@ -160,7 +160,7 @@ export default function BusinessSitePage() {
           <div className="business-about-wrapper">
             <div className="business-about-content">
               <h2>About TechSolutions</h2>
-              <p>We are a leading technology consulting firm dedicated to helping businesses thrive in the digital landscape. With over a decade of experience, we've helped hundreds of companies transform their operations and achieve their goals.</p>
+              <p>We are a leading technology consulting firm dedicated to helping businesses thrive in the digital landscape. With over a decade of experience, we&apos;ve helped hundreds of companies transform their operations and achieve their goals.</p>
               <div className="business-stats">
                 <div className="business-stat-item">
                   <div className="business-stat-number">500+</div>
