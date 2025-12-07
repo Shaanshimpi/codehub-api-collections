@@ -384,7 +384,7 @@ export default function HotelWebsitePage() {
                 </div>
                 <div className="hotel-testimonial-rating">★★★★★</div>
               </div>
-              <p className="hotel-testimonial-text">"Exceptional service and luxurious accommodations. The staff went above and beyond to make our stay memorable."</p>
+              <p className="hotel-testimonial-text">&quot;Exceptional service and luxurious accommodations. The staff went above and beyond to make our stay memorable.&quot;</p>
               <div className="hotel-testimonial-footer">
                 <span>Stayed in: Presidential Suite</span>
                 <span>•</span>
@@ -402,7 +402,7 @@ export default function HotelWebsitePage() {
                 </div>
                 <div className="hotel-testimonial-rating">★★★★★</div>
               </div>
-              <p className="hotel-testimonial-text">"Perfect location and amazing amenities. The kids loved the pool and we enjoyed the fine dining experience."</p>
+              <p className="hotel-testimonial-text">&quot;Perfect location and amazing amenities. The kids loved the pool and we enjoyed the fine dining experience.&quot;</p>
               <div className="hotel-testimonial-footer">
                 <span>Stayed in: Executive Room</span>
                 <span>•</span>
@@ -420,7 +420,7 @@ export default function HotelWebsitePage() {
                 </div>
                 <div className="hotel-testimonial-rating">★★★★☆</div>
               </div>
-              <p className="hotel-testimonial-text">"Beautiful rooms with stunning views. The spa treatment was incredible. Highly recommend for special occasions."</p>
+              <p className="hotel-testimonial-text">&quot;Beautiful rooms with stunning views. The spa treatment was incredible. Highly recommend for special occasions.&quot;</p>
               <div className="hotel-testimonial-footer">
                 <span>Stayed in: Deluxe Room</span>
                 <span>•</span>

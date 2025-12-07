@@ -425,7 +425,7 @@ export default function EducationPlatformPage() {
             <div className="edu-testimonial-item">
               <div className="edu-testimonial-content">
                 <div className="edu-testimonial-rating">★★★★★</div>
-                <p>"This platform changed my career. The courses are comprehensive and the instructors are amazing!"</p>
+                <p>&quot;This platform changed my career. The courses are comprehensive and the instructors are amazing!&quot;</p>
               </div>
               <div className="edu-testimonial-author">
                 <div className="edu-testimonial-avatar">MJ</div>
@@ -438,7 +438,7 @@ export default function EducationPlatformPage() {
             <div className="edu-testimonial-item">
               <div className="edu-testimonial-content">
                 <div className="edu-testimonial-rating">★★★★★</div>
-                <p>"Best investment in my education. The practical projects helped me land my dream job."</p>
+                <p>&quot;Best investment in my education. The practical projects helped me land my dream job.&quot;</p>
               </div>
               <div className="edu-testimonial-author">
                 <div className="edu-testimonial-avatar">EB</div>
@@ -451,7 +451,7 @@ export default function EducationPlatformPage() {
             <div className="edu-testimonial-item">
               <div className="edu-testimonial-content">
                 <div className="edu-testimonial-rating">★★★★☆</div>
-                <p>"Great platform with excellent course quality. Highly recommend for anyone looking to upskill."</p>
+                <p>&quot;Great platform with excellent course quality. Highly recommend for anyone looking to upskill.&quot;</p>
               </div>
               <div className="edu-testimonial-author">
                 <div className="edu-testimonial-avatar">DT</div>
@@ -492,14 +492,14 @@ export default function EducationPlatformPage() {
                 <h3>Can I cancel anytime?</h3>
                 <span className="edu-faq-icon">+</span>
               </div>
-              <p className="edu-faq-answer">Absolutely. You can cancel your subscription at any time. You'll retain access until the end of your billing period.</p>
+              <p className="edu-faq-answer">Absolutely. You can cancel your subscription at any time. You&apos;ll retain access until the end of your billing period.</p>
             </div>
             <div className="edu-faq-item">
               <div className="edu-faq-question">
                 <h3>Do you offer refunds?</h3>
                 <span className="edu-faq-icon">+</span>
               </div>
-              <p className="edu-faq-answer">We offer a 30-day money-back guarantee. If you're not satisfied, contact us within 30 days for a full refund.</p>
+              <p className="edu-faq-answer">We offer a 30-day money-back guarantee. If you&apos;re not satisfied, contact us within 30 days for a full refund.</p>
             </div>
           </div>
         </div>
