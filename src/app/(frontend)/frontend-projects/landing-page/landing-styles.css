@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.landing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation - Same flex complexity */
+.landing-navbar {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.landing-navbar .landing-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+}
+
+.landing-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+.landing-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.landing-nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.landing-nav-links a:hover {
+  color: #3b82f6;
+}
+
+/* Hero Section - Centered with Buttons */
+.landing-hero {
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  text-align: center;
+}
+
+.landing-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.landing-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.landing-hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+  font-weight: 600;
+}
+
+.landing-hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.landing-hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.landing-btn-primary {
+  padding: 14px 32px;
+  background: white;
+  color: #3b82f6;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.3s;
+}
+
+.landing-btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.landing-btn-secondary {
+  padding: 14px 32px;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.landing-btn-secondary:hover {
+  background: white;
+  color: #3b82f6;
+}
+
+.landing-btn-outline {
+  padding: 12px 24px;
+  background: transparent;
+  color: #3b82f6;
+  text-decoration: none;
+  border: 2px solid #3b82f6;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.landing-btn-outline:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Features Section */
+.landing-features {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.landing-features h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.landing-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.landing-feature-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.landing-feature-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.landing-feature-box p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Pricing Section */
+.landing-pricing {
+  padding: 80px 20px;
+  background: white;
+}
+
+.landing-pricing h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.landing-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.landing-pricing-card {
+  background: #f8f9fa;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.landing-pricing-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.landing-pricing-card.landing-featured {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.landing-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #10b981;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.landing-pricing-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.landing-pricing-card.landing-featured h3 {
+  color: white;
+}
+
+.landing-price {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #3b82f6;
+  margin-bottom: 1.5rem;
+}
+
+.landing-pricing-card.landing-featured .landing-price {
+  color: white;
+}
+
+.landing-price span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #666;
+}
+
+.landing-pricing-card.landing-featured .landing-price span {
+  color: rgba(255,255,255,0.8);
+}
+
+.landing-pricing-features {
+  list-style: none;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.landing-pricing-features li {
+  padding: 0.75rem 0;
+  color: #666;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.landing-pricing-card.landing-featured .landing-pricing-features li {
+  color: rgba(255,255,255,0.9);
+  border-bottom-color: rgba(255,255,255,0.2);
+}
+
+.landing-pricing-features li:last-child {
+  border-bottom: none;
+}
+
+/* Testimonials Section */
+.landing-testimonials {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.landing-testimonials h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.landing-testimonials-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.landing-testimonial-item {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.landing-testimonial-text {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.landing-testimonial-author {
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Contact Section */
+.landing-contact {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+}
+
+.landing-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.landing-contact p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.landing-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.landing-contact-info p {
+  color: #333;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Footer */
+.landing-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .landing-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .landing-hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landing-features-grid,
+  .landing-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-testimonials-list {
+    flex-direction: column;
+  }
+}
+
+

@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.fashion-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation - Same flex complexity */
+.fashion-navbar {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.fashion-navbar .fashion-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+}
+
+.fashion-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a855f7;
+}
+
+.fashion-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.fashion-nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.fashion-nav-links a:hover {
+  color: #a855f7;
+}
+
+/* Hero Section */
+.fashion-hero {
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.fashion-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.fashion-hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.fashion-shop-button {
+  display: inline-block;
+  padding: 16px 40px;
+  background: white;
+  color: #a855f7;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: transform 0.3s;
+}
+
+.fashion-shop-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Collection Section - Complex Layout */
+.fashion-collection {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.fashion-collection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.fashion-collection-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.fashion-collection-filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.fashion-filter-tag {
+  padding: 0.5rem 1.5rem;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.fashion-filter-tag:hover {
+  border-color: #a855f7;
+  color: #a855f7;
+  background: #f3e8ff;
+}
+
+.fashion-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.fashion-product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.fashion-product-card:hover {
+  transform: translateY(-5px);
+}
+
+.fashion-product-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.fashion-product-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.fashion-product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.fashion-product-header h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+  flex: 1;
+}
+
+.fashion-product-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #a855f7;
+  flex-shrink: 0;
+}
+
+.fashion-product-category {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Lookbook Section - Complex Grid */
+.fashion-lookbook {
+  padding: 80px 20px;
+  background: white;
+}
+
+.fashion-lookbook h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.fashion-lookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  grid-auto-rows: 300px;
+}
+
+.fashion-lookbook-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.fashion-lookbook-item:hover {
+  transform: scale(1.02);
+}
+
+.fashion-lookbook-item.fashion-lookbook-large {
+  grid-row: span 2;
+}
+
+.fashion-lookbook-item.fashion-lookbook-wide {
+  grid-column: span 2;
+}
+
+.fashion-lookbook-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* About Section - Complex Layout */
+.fashion-about {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.fashion-about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fashion-about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.fashion-about-content > p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.fashion-about-features {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fashion-about-feature {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.fashion-about-feature h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.fashion-about-feature p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Footer */
+.fashion-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fashion-nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .fashion-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .fashion-collection-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fashion-product-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fashion-products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fashion-lookbook-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
+  }
+
+  .fashion-lookbook-item.fashion-lookbook-large,
+  .fashion-lookbook-item.fashion-lookbook-wide {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .fashion-about-features {
+    flex-direction: column;
+  }
+}
+
+

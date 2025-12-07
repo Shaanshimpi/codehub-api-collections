@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation - Same flex complexity but different style */
+.portfolio-navbar {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.portfolio-navbar .portfolio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+}
+
+.portfolio-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8b5cf6;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+
+.portfolio-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.portfolio-nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.portfolio-nav-links a:hover {
+  color: #8b5cf6;
+}
+
+/* Hero Section - Different Layout: Two Column */
+.portfolio-hero {
+  padding: 100px 20px;
+  background: #f8f9fa;
+}
+
+.portfolio-hero-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.portfolio-hero-text {
+  flex: 1;
+}
+
+.portfolio-hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.portfolio-hero-subtitle {
+  font-size: 1.5rem;
+  color: #8b5cf6;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.portfolio-hero-description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+.portfolio-hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-hero-img {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Work Section - Different Layout: List Style */
+.portfolio-work {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.portfolio-work h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.portfolio-work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.portfolio-work-item {
+  display: flex;
+  gap: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.portfolio-work-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.portfolio-work-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio-work-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.portfolio-work-content p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* About Section - Different Layout: Centered with Tags */
+.portfolio-about {
+  padding: 80px 20px;
+  background: #8b5cf6;
+  color: white;
+}
+
+.portfolio-about-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.portfolio-about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.portfolio-about-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.8;
+}
+
+.portfolio-skills-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio-skill-tag {
+  padding: 0.5rem 1.5rem;
+  background: white;
+  color: #8b5cf6;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Contact Section */
+.portfolio-contact {
+  padding: 80px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.portfolio-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.portfolio-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.portfolio-contact-info p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+.portfolio-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .portfolio-hero-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .portfolio-hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .portfolio-work-item {
+    flex-direction: column;
+  }
+
+  .portfolio-work-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .portfolio-skills-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

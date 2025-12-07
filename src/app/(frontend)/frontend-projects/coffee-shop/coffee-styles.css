@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.coffee-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation - Same flex complexity */
+.coffee-navbar {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.coffee-navbar .coffee-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+}
+
+.coffee-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6f4e37;
+}
+
+.coffee-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.coffee-nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.coffee-nav-links a:hover {
+  color: #6f4e37;
+}
+
+/* Hero Section - Full Width Image Background */
+.coffee-hero {
+  height: 500px;
+  background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=500&fit=crop');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.coffee-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coffee-hero-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.coffee-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.coffee-hero-content p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* Menu Section - Vertical List with Flex Row Items */
+.coffee-menu {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.coffee-menu h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.coffee-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.coffee-menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.coffee-menu-info {
+  flex: 1;
+}
+
+.coffee-menu-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.coffee-menu-info p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.coffee-menu-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6f4e37;
+  margin-left: 2rem;
+}
+
+/* Features Section - Horizontal Grid */
+.coffee-features {
+  padding: 80px 20px;
+  background: #6f4e37;
+}
+
+.coffee-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.coffee-feature-card {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.coffee-feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.coffee-feature-card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* About Section - Split Two Column Layout */
+.coffee-about {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.coffee-about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.coffee-about-image {
+  flex: 1;
+}
+
+.coffee-about-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.coffee-about-text {
+  flex: 1;
+}
+
+.coffee-about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.coffee-about-text p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Footer */
+.coffee-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .coffee-nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .coffee-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .coffee-menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .coffee-menu-price {
+    margin-left: 0;
+  }
+
+  .coffee-about-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .coffee-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+

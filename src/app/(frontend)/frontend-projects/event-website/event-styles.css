@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.event-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation - Same flex complexity */
+.event-navbar {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.event-navbar .event-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+}
+
+.event-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ef4444;
+}
+
+.event-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.event-nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.event-nav-links a:hover {
+  color: #ef4444;
+}
+
+/* Hero Section - Large Banner with Details */
+.event-hero {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  padding: 150px 20px;
+  text-align: center;
+}
+
+.event-hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.event-hero-date {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.95;
+  font-weight: 600;
+}
+
+.event-hero-location {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.event-cta-button {
+  display: inline-block;
+  padding: 16px 40px;
+  background: white;
+  color: #ef4444;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: transform 0.3s;
+}
+
+.event-cta-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Schedule Section - Timeline Style */
+.event-schedule {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.event-schedule h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.event-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.event-schedule-item {
+  display: flex;
+  gap: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-left: 4px solid #ef4444;
+}
+
+.event-time {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ef4444;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.event-schedule-content {
+  flex: 1;
+}
+
+.event-schedule-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.event-schedule-content p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Speakers Section - Card Grid with Images */
+.event-speakers {
+  padding: 80px 20px;
+  background: white;
+}
+
+.event-speakers h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.event-speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.event-speaker-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.event-speaker-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-speaker-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  display: block;
+  border: 4px solid #ef4444;
+}
+
+.event-speaker-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.event-speaker-role {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Register Section - Centered CTA */
+.event-register {
+  padding: 100px 20px;
+  background: #ef4444;
+  color: white;
+  text-align: center;
+}
+
+.event-register-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.event-register-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.event-register-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.event-register-button {
+  display: inline-block;
+  padding: 16px 40px;
+  background: white;
+  color: #ef4444;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: transform 0.3s;
+}
+
+.event-register-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.event-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .event-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .event-schedule-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .event-time {
+    min-width: auto;
+  }
+
+  .event-speakers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+

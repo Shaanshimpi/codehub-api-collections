@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.music-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation - Same flex complexity */
+.music-navbar {
+  background: #000;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.music-navbar .music-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+}
+
+.music-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ec4899;
+}
+
+.music-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.music-nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.music-nav-links a:hover {
+  color: #ec4899;
+}
+
+/* Hero Section */
+.music-hero {
+  background: linear-gradient(135deg, #000 0%, #1f1f1f 100%);
+  color: white;
+  padding: 150px 20px;
+  text-align: center;
+}
+
+.music-hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.music-hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.music-play-button {
+  display: inline-block;
+  padding: 16px 40px;
+  background: #ec4899;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+.music-play-button:hover {
+  background: #db2777;
+}
+
+/* Tour Section - Complex Flex List */
+.music-tour {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.music-tour h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.music-tour-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.music-tour-item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-left: 4px solid #ec4899;
+}
+
+.music-tour-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: #ec4899;
+  color: white;
+  border-radius: 8px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.music-date-day {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.music-date-month {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.music-tour-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.music-tour-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.music-tour-header h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0;
+}
+
+.music-tour-venue {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.music-tour-info {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.music-tour-location,
+.music-tour-time {
+  color: #666;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.music-tour-location:before {
+  content: "📍";
+  margin-right: 0.5rem;
+}
+
+.music-tour-time:before {
+  content: "🕐";
+  margin-right: 0.5rem;
+}
+
+.music-tour-action {
+  flex-shrink: 0;
+}
+
+.music-ticket-button {
+  padding: 10px 24px;
+  background: #ec4899;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.music-ticket-button:hover {
+  background: #db2777;
+}
+
+/* Albums Section */
+.music-albums {
+  padding: 80px 20px;
+  background: white;
+}
+
+.music-albums h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.music-albums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.music-album-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.music-album-card:hover {
+  transform: translateY(-5px);
+}
+
+.music-album-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.music-album-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.music-album-info h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.music-album-year {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Band Members Section */
+.music-band {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.music-band h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.music-band-members {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.music-member-card {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.music-member-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.music-member-details {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.music-member-details h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+.music-member-role {
+  color: #ec4899;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Footer */
+.music-footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 2rem 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .music-nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .music-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .music-tour-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .music-tour-date {
+    align-self: center;
+  }
+
+  .music-tour-action {
+    width: 100%;
+  }
+
+  .music-ticket-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .music-tour-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .music-albums-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .music-band-members {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .music-member-card {
+    max-width: 100%;
+  }
+}
+
+
